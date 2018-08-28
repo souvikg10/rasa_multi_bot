@@ -1,0 +1,30 @@
+intents:
+  - kemn_acho
+  - tumi_key
+  - ki_korcho
+  - golpo_sonao
+  - kolkata_khobor
+  
+
+actions:
+- utter_bhalo
+- utter_kaaj
+- utter_key
+- utter_golpo
+- utter_kolkata
+
+templates:
+  utter_bhalo:
+  - text: "bhalo achi"
+
+  utter_kaaj:
+  - text: "Amar khub kaaj ekhun"
+
+  utter_key:
+  - text: "Aami manush noi"
+
+  utter_golpo:
+  - text: "Ki aar golpo sonabo tomae"
+
+  utter_kolkata:
+  - text: "kolkata te prochondo gorom"

@@ -1,0 +1,16 @@
+{
+  "features": [
+    "intent_kemn_acho", 
+    "intent_ki_korcho", 
+    "intent_tumi_key", 
+    "intent_golpo_sonao", 
+    "intent_kolkata_khobor", 
+    "prev_action_listen", 
+    "prev_action_restart", 
+    "prev_utter_bhalo", 
+    "prev_utter_golpo", 
+    "prev_utter_kaaj", 
+    "prev_utter_key", 
+    "prev_utter_kolkata"
+  ]
+}

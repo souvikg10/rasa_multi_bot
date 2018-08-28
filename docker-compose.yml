@@ -1,0 +1,19 @@
+version: '3'
+services:
+  rasa_nlu_setting:
+    image: rasa_nlu_setting
+    build:
+      context: ./rasa_nlu_setting
+    ports:
+      - "5000:5000"
+    command: python -m rasa_nlu.server -c config.yaml --path nlu --cors *
+  rasa_core_test:
+    image: rasa_core_test
+    build:
+      context: .
+    volumes:
+      - $PWD:/app
+    ports:
+      - "5005:5005"
+    command: python -m rasa_core.server -d data/bengalibot/dialogue -o out.log --cors *
+  

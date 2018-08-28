@@ -1,0 +1,35 @@
+action_factory: null
+action_names:
+- utter_bhalo
+- utter_golpo
+- utter_kaaj
+- utter_key
+- utter_kolkata
+actions:
+- utter_bhalo
+- utter_golpo
+- utter_kaaj
+- utter_key
+- utter_kolkata
+config:
+  store_entities_as_slots: true
+entities: []
+intents:
+- kemn_acho
+- ki_korcho
+- tumi_key
+- golpo_sonao
+- kolkata_khobor
+slots: {}
+templates:
+  utter_bhalo:
+  - text: Aami bhalo achi
+  utter_golpo:
+  - text: Amar kache kono golpo nei
+  utter_kaaj:
+  - text: Aami kono kaaj korte parina apatoto
+  utter_key:
+  - text: Aami janina
+  utter_kolkata:
+  - text: Kolkatae aajke khub gorom
+topics: []

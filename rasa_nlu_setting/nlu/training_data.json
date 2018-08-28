@@ -1,0 +1,116 @@
+﻿{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Tumi kemn acho?",
+        "intent": "kemn_acho",
+        "entities": []
+      },
+      {
+        "text": "Tumi ki korcho?",
+        "intent": "ki_korcho",
+        "entities": []
+      },
+      {
+        "text": "Tomar naam ki?",
+        "intent": "tumi_key",
+        "entities": []
+      },
+      {
+        "text": "Ekti golpo sonao amake",
+        "intent": "golpo_sonao",
+        "entities": []
+      },
+      {
+        "text": "Kolkatae kemn cholche shob kichu?",
+        "intent": "kolkata_khobor",
+        "entities": []
+      },
+      {
+        "text": "ki khobor?",
+        "intent": "kemn_acho",
+        "entities": []
+      },
+      {
+        "text": "shob kichu thik thak cholche?",
+        "intent": "kemn_acho",
+        "entities": []
+      },
+      {
+        "text": "tomar khobor bolo",
+        "intent": "kemn_acho",
+        "entities": []
+      },
+      {
+        "text": "sorir thik ache",
+        "intent": "kemn_acho",
+        "entities": []
+      },
+      {
+        "text": "Kemn cholche",
+        "intent": "kemn_acho",
+        "entities": []
+      },
+      {
+        "text": "Aajkal tumi ki korcho",
+        "intent": "ki_korcho",
+        "entities": []
+      },
+      {
+        "text": "kirom kaaj korcho ",
+        "intent": "ki_korcho",
+        "entities": []
+      },
+      {
+        "text": "tumi ki koro?",
+        "intent": "ki_korcho",
+        "entities": []
+      },
+      {
+        "text": "tumi ke",
+        "intent": "tumi_key",
+        "entities": []
+      },
+      {
+        "text": "apnar naam ki?",
+        "intent": "tumi_key",
+        "entities": []
+      },
+      {
+        "text": "aami tomake chinina",
+        "intent": "tumi_key",
+        "entities": []
+      },
+      {
+        "text": "aami bored ekhun, golpo sonabe?",
+        "intent": "golpo_sonao",
+        "entities": []
+      },
+      {
+        "text": "kono khobor ache?",
+        "intent": "golpo_sonao",
+        "entities": []
+      },
+      {
+        "text": "aami kolkata aschi",
+        "intent": "kolkata_khobor",
+        "entities": []
+      },
+      {
+        "text": "barite ki hochhe?",
+        "intent": "kolkata_khobor",
+        "entities": []
+      },
+      {
+        "text": "kolkata er khobor bolo",
+        "intent": "kolkata_khobor",
+        "entities": []
+      },
+      {
+        "text": "kolkata te shob thik thak",
+        "intent": "kolkata_khobor",
+        "entities": []
+      }
+    ]
+  }
+}

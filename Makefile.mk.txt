@@ -1,0 +1,23 @@
+.PHONY: clean test lint
+
+TEST_PATH=./
+
+help:
+	@echo "    train-nlu"
+	@echo "        Train the natural language understanding using Rasa NLU."
+	@echo "    train-core"
+	@echo "        Train a dialogue model using Rasa core."
+	@echo "    run"
+	@echo "        Spin up a server that serves as an endpoint"
+
+train-nlu:
+	python -m rasa_nlu.train -c configs/config_servicing.json --fixed_model_name current
+
+train-core:
+	python -m rasa_core.train -s data/servicing-bot/story/stories.md -d domain.yml -o data/bots/servicing-bot/models/dialogue --epochs 300
+
+run:
+	python -m rasa_core.server -d data/servicing-bot/models/dialogue -u data/servicing-bot/rasa_servicing_en_nlu/current -o out.log
+
+run-cmdline:
+	python -m rasa_core.run -d data/servicing-bot/models/dialogue -u data/servicing-bot/rasa_servicing_en_nlu/current -o out.log

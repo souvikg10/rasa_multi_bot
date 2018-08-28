@@ -1,0 +1,62 @@
+action_factory: null
+actions:
+- utter_greet
+- utter_card_lost
+- utter_card_lost_type
+- utter_goodbye
+- utter_joke_chicken
+- utter_find_channel
+- utter_find_destination
+- utter_transfer_limit_france
+- utter_transfer_limit_belgium
+config:
+  store_entities_as_slots: true
+entities:
+- card_type
+- limit_destination
+- limit_channel
+intents:
+- greet
+- goodbye
+- affirm
+- card_lost
+- transferlimit
+- jokechicken
+slots:
+  card_type:
+    type: text
+  limit_channel:
+    type: categorical
+    values:
+    - easy banking app
+  limit_destination:
+    type: categorical
+    values:
+    - belgium
+    - france
+templates:
+  utter_card_lost:
+  - text: So you have lost your {card_type} card. Please contact 080012345 to have
+      it blocked immediately
+  utter_card_lost_type:
+  - text: Which type of card you have lost?
+  utter_find_channel:
+  - text: Which channel would you like to make the transfer from?
+  utter_find_destination:
+  - text: Which country are you trying to make the tranfer?
+  - text: Which country would you like to perform the transfer? France or Belgium
+  utter_goodbye:
+  - image: https://m.popkey.co/5109b6/AVrJJ_s-200x150.gif
+    text: ''
+  utter_greet:
+  - image: https://media.giphy.com/media/VWw8pthDfGkxO/giphy.gif
+    text: Hello! I am here to help you answer basic questions about losing your card
+      and transfer limits. Don't start expecting a lot from me as of yet.
+  utter_joke_chicken:
+  - image: https://thecomicninja.files.wordpress.com/2013/05/b-c-why-did-the-chicken.gif
+    text: How about this?
+  utter_transfer_limit_belgium:
+  - text: If you are making a transfer to Belgium, you can transfer around 5000 euros
+  utter_transfer_limit_france:
+  - text: if you are making a transfer to France, you can transfer around 1000 euros
+topics: []
