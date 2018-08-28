@@ -1,4 +1,4 @@
-FROM rasa_local_settings
+FROM rasa/rasa/rasa_core
 
 ENV RASA_DOCKER="YES" \
     RASA_HOME=/app \
@@ -16,19 +16,6 @@ WORKDIR ${RASA_HOME}
 
 COPY . ${RASA_HOME}
 
-# use bash always
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+EXPOSE 5000 5005 5006
 
-RUN pip install rasa_nlu==0.13.1
-
-RUN pip install flask
-
-RUN git clone https://github.com/RasaHQ/rasa_core.git
-
-RUN cd rasa_core \
-&& pip install -r requirements.txt \
-&& pip install -e .
-
-EXPOSE 5000 5005
-
-CMD python ./bot.py --port 5005
+CMD python bot.py --port 5005
