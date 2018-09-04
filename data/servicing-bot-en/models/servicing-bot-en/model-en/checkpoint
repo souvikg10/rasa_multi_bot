@@ -1,0 +1,2 @@
+model_checkpoint_path: "/app/data/servicing-bot-en/models/servicing-bot-en/model-en/intent_classifier_tensorflow_embedding.ckpt"
+all_model_checkpoint_paths: "/app/data/servicing-bot-en/models/servicing-bot-en/model-en/intent_classifier_tensorflow_embedding.ckpt"

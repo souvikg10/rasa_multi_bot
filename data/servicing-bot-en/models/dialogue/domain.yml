@@ -1,0 +1,41 @@
+action_factory: null
+action_names:
+- utter_greet
+- utter_card_lost
+- utter_card_lost_type
+- utter_goodbye
+actions:
+- utter_greet
+- utter_card_lost
+- utter_card_lost_type
+- utter_goodbye
+config:
+  store_entities_as_slots: true
+entities:
+- card_type
+intents:
+- card_lost:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- greet:
+    use_entities: true
+- affirm:
+    use_entities: true
+slots:
+  card_type:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_card_lost:
+  - text: So you have lost your {card_type} card. Please contact 080012345 to have
+      it blocked immediately
+  utter_card_lost_type:
+  - text: Which type of card you have lost?
+  utter_goodbye:
+  - image: https://m.popkey.co/5109b6/AVrJJ_s-200x150.gif
+    text: ''
+  utter_greet:
+  - image: https://media.giphy.com/media/VWw8pthDfGkxO/giphy.gif
+    text: Hello! I am here to help you answer basic questions about losing your card
+      and transfer limits. Don't start expecting a lot from me as of yet.

@@ -1,0 +1,223 @@
+﻿{
+  "rasa_nlu_data": {
+    "regex_features": [
+      {
+        "name": "zipcode",
+        "pattern": "[0-9]{5}"
+      }
+    ],
+    "entity_synonyms": [],
+    "common_examples": [
+      {
+        "text": "hey",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "salut",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Bonjour",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "bonjour",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hi",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Bonsoir",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "salut",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "bon jour",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "ouah",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "oui",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "si",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "bien sur",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "c'est ca",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "d'accord",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "bien",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "correct",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "tres bien choix",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "absolutement",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "je peux pas trouver mon card",
+        "intent": "card_lost",
+        "entities": []
+      },
+      {
+        "text": "My card est perdre",
+        "intent": "card_lost",
+        "entities": []
+      },
+      {
+        "text": "je cherche ma carte toujours",
+        "intent": "card_lost",
+        "entities": []
+      },
+      {
+        "text": "je cherche ma carte debit",
+        "intent": "card_lost",
+        "entities": [
+          {
+            "start": 20,
+            "end": 25,
+            "value": "debit",
+            "entity": "card_type"
+          }
+        ]
+      },
+      {
+        "text": "j'ai perdu ma carte du credit",
+        "intent": "card_lost",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "credit",
+            "entity": "card_type"
+          }
+        ]
+      },
+      {
+        "text": "Mon carte de credit est toujours non trouvable",
+        "intent": "card_lost",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "credit",
+            "entity": "card_type"
+          }
+        ]
+      },
+      {
+        "text": "je peux pas trouver ma bancontact",
+        "intent": "card_lost",
+        "entities": [
+          {
+            "start": 23,
+            "end": 33,
+            "value": "debit",
+            "entity": "card_type"
+          }
+        ]
+      },
+      {
+        "text": "je cherche pour ma mistercash but je ne trouve plus",
+        "intent": "card_lost",
+        "entities": [
+          {
+            "start": 19,
+            "end": 29,
+            "value": "debit",
+            "entity": "card_type"
+          }
+        ]
+      },
+      {
+        "text": "bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "ciao",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "au revoir",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "stop",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "salut salut",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "farewell",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "Bye bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "have a good one",
+        "intent": "goodbye",
+        "entities": []
+      }
+    ]
+  }
+}

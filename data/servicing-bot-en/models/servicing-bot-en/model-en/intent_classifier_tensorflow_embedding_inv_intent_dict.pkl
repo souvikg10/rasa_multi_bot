@@ -1,0 +1,14 @@
+(dp1
+I0
+Vaffirm
+p2
+sI1
+Vcard_lost
+p3
+sI2
+Vgoodbye
+p4
+sI3
+Vgreet
+p5
+s.

@@ -1,0 +1,33 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - card_lost
+  
+entities:
+ - card_type
+ 
+slots:
+  card_type:
+    type: text
+
+templates:
+  utter_greet:
+  - text: "Hello! I am here to help you answer basic questions about losing your card and transfer limits. Don't start expecting a lot from me as of yet."
+    image: "https://media.giphy.com/media/VWw8pthDfGkxO/giphy.gif"
+  utter_card_lost_type:
+  - text: "Which type of card you have lost?"
+
+  utter_card_lost:
+  - text: "So you have lost your {card_type} card. Please contact 080012345 to have it blocked immediately"
+
+  utter_goodbye:
+  - text: ""
+    image: "https://m.popkey.co/5109b6/AVrJJ_s-200x150.gif"
+
+   
+actions:
+  - utter_greet
+  - utter_card_lost
+  - utter_card_lost_type
+  - utter_goodbye

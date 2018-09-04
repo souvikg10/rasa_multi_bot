@@ -1,0 +1,36 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - card_lost
+
+  
+entities:
+ - card_type
+ 
+
+slots:
+  card_type:
+    type: text
+  
+templates:
+  utter_greet:
+  - text: "Bonjour je suis ici pour vous aider."
+    image: "https://media.giphy.com/media/VWw8pthDfGkxO/giphy.gif"
+  utter_card_lost_type:
+  - text: "Quelle type de carte, vous ne trouvez plus?"
+
+  utter_card_lost:
+  - text: "ok,vous avez perdu votre carte de  {card_type}. Veuiilez trouvez notre numero 088000 pour blocker votre carte"
+
+  utter_goodbye:
+  - text: ""
+    image: "https://m.popkey.co/5109b6/AVrJJ_s-200x150.gif"
+
+     
+actions:
+  - utter_greet
+  - utter_card_lost
+  - utter_card_lost_type
+  - utter_goodbye
+  

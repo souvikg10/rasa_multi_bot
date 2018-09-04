@@ -1,0 +1,17 @@
+{
+  "states": [
+    "intent_affirm", 
+    "intent_card_lost", 
+    "intent_goodbye", 
+    "intent_greet", 
+    "entity_card_type", 
+    "slot_card_type_0", 
+    "prev_action_listen", 
+    "prev_action_restart", 
+    "prev_action_default_fallback", 
+    "prev_utter_greet", 
+    "prev_utter_card_lost", 
+    "prev_utter_card_lost_type", 
+    "prev_utter_goodbye"
+  ]
+}

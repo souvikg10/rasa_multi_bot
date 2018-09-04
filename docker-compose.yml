@@ -1,5 +1,17 @@
 version: '3'
 services:
+  rasa_en:
+    image: rasa_test
+    build:
+      context: .
+    environment:
+      - REDIS_HOST=redis
+    volumes:
+      - $PWD/data:/app/data
+      - $PWD/bot.py:/app/bot.py
+    ports:
+      - "5005:5005"
+    command: python bot.py -d data/servicing-bot-en/models/dialogue -u data/servicing-bot-en/models/servicing-bot-en/model-en --port 5005 -o log_file.log
   rasa_fr:
     image: rasa_test
     build:
@@ -7,19 +19,11 @@ services:
     environment:
       - REDIS_HOST=redis
     volumes:
-      - $PWD:/app
-    ports:
-      - "5005:5005"
-    command: python bot.py --port 5005
-  rasa_en:
-    image: rasa_test
-    build:
-      context: .
-    volumes:
-      - $PWD:/app
+      - $PWD/data:/app/data
+      - $PWD/bot.py:/app/bot.py
     ports:
       - "5006:5006"
-    command: python bot.py --port 5006
+    command: python bot.py -d data/servicing-bot-fr/models/dialogue -u data/servicing-bot-fr/models/servicing-bot-fr/model-fr  --port 5006 -o log_file.log
   redis:  
     image: redis
     build:

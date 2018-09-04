@@ -18,14 +18,12 @@ from typing import Union, Text, Optional
 
 from rasa_core import utils, events
 from rasa_core.agent import Agent
-from rasa_core.channels.direct import CollectingOutputChannel
 from rasa_core.interpreter import NaturalLanguageInterpreter, RasaNLUHttpInterpreter
 from rasa_core.tracker_store import TrackerStore, RedisTrackerStore
 from rasa_core.trackers import DialogueStateTracker
 from rasa_core.domain import TemplateDomain, Domain, check_domain_sanity
 from rasa_core.version import __version__
-from rasa_core.utils import EndpointConfig
-
+from rasa_core.channels.direct import CollectingOutputChannel
 logger = logging.getLogger(__name__)
 
 
@@ -103,7 +101,6 @@ def request_parameters():
 	if request.method == 'GET':
 		return request.args
 	else:
-
 		try:
 			return request.get_json(force=True)
 		except ValueError as e:
@@ -173,7 +170,6 @@ def create_app(model_directory,
 	domain = TemplateDomain.load(os.path.join(model_directory, "domain.yml"),
 									 action_factory)
 	# ensures the domain hasn't changed between test and train
-	domain.compare_with_specification(model_directory)
 	tracker_store = RedisTrackerStore(domain,host=os.environ["REDIS_HOST"])
 	action_factory = action_factory
 
@@ -338,9 +334,9 @@ def create_app(model_directory,
 	@ensure_loaded_agent(agent)
 	def respond(sender_id):
 		request_params = request_parameters()
-
+		
 		if 'query' in request_params:
-			message = request_params.pop('query')
+			message = request_params.get('query')
 		elif 'q' in request_params:
 			message = request_params.pop('q')
 		else:
@@ -348,7 +344,7 @@ def create_app(model_directory,
 										  "specified."),
 							status=400,
 							mimetype="application/json")
-
+		print(request_params)
 		try:
 			out = CollectingOutputChannel()
 			responses = agent().handle_message(message,

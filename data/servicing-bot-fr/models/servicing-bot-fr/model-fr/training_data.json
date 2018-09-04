@@ -1,0 +1,193 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "hey", 
+        "intent": "greet"
+      }, 
+      {
+        "text": "salut", 
+        "intent": "greet"
+      }, 
+      {
+        "text": "Bonjour", 
+        "intent": "greet"
+      }, 
+      {
+        "text": "bonjour", 
+        "intent": "greet"
+      }, 
+      {
+        "text": "hi", 
+        "intent": "greet"
+      }, 
+      {
+        "text": "Bonsoir", 
+        "intent": "greet"
+      }, 
+      {
+        "text": "salut", 
+        "intent": "greet"
+      }, 
+      {
+        "text": "bon jour", 
+        "intent": "greet"
+      }, 
+      {
+        "text": "ouah", 
+        "intent": "affirm"
+      }, 
+      {
+        "text": "oui", 
+        "intent": "affirm"
+      }, 
+      {
+        "text": "si", 
+        "intent": "affirm"
+      }, 
+      {
+        "text": "bien sur", 
+        "intent": "affirm"
+      }, 
+      {
+        "text": "c'est ca", 
+        "intent": "affirm"
+      }, 
+      {
+        "text": "ok", 
+        "intent": "affirm"
+      }, 
+      {
+        "text": "d'accord", 
+        "intent": "affirm"
+      }, 
+      {
+        "text": "bien", 
+        "intent": "affirm"
+      }, 
+      {
+        "text": "correct", 
+        "intent": "affirm"
+      }, 
+      {
+        "text": "tres bien choix", 
+        "intent": "affirm"
+      }, 
+      {
+        "text": "absolutement", 
+        "intent": "affirm"
+      }, 
+      {
+        "text": "je peux pas trouver mon card", 
+        "intent": "card_lost"
+      }, 
+      {
+        "text": "My card est perdre", 
+        "intent": "card_lost"
+      }, 
+      {
+        "text": "je cherche ma carte toujours", 
+        "intent": "card_lost"
+      }, 
+      {
+        "entities": [
+          {
+            "start": 20, 
+            "end": 25, 
+            "value": "debit", 
+            "entity": "card_type"
+          }
+        ], 
+        "intent": "card_lost", 
+        "text": "je cherche ma carte debit"
+      }, 
+      {
+        "entities": [
+          {
+            "start": 23, 
+            "end": 29, 
+            "value": "credit", 
+            "entity": "card_type"
+          }
+        ], 
+        "intent": "card_lost", 
+        "text": "j'ai perdu ma carte du credit"
+      }, 
+      {
+        "entities": [
+          {
+            "start": 13, 
+            "end": 19, 
+            "value": "credit", 
+            "entity": "card_type"
+          }
+        ], 
+        "intent": "card_lost", 
+        "text": "Mon carte de credit est toujours non trouvable"
+      }, 
+      {
+        "entities": [
+          {
+            "start": 23, 
+            "end": 33, 
+            "value": "debit", 
+            "entity": "card_type"
+          }
+        ], 
+        "intent": "card_lost", 
+        "text": "je peux pas trouver ma bancontact"
+      }, 
+      {
+        "entities": [
+          {
+            "start": 19, 
+            "end": 29, 
+            "value": "debit", 
+            "entity": "card_type"
+          }
+        ], 
+        "intent": "card_lost", 
+        "text": "je cherche pour ma mistercash but je ne trouve plus"
+      }, 
+      {
+        "text": "bye", 
+        "intent": "goodbye"
+      }, 
+      {
+        "text": "ciao", 
+        "intent": "goodbye"
+      }, 
+      {
+        "text": "au revoir", 
+        "intent": "goodbye"
+      }, 
+      {
+        "text": "stop", 
+        "intent": "goodbye"
+      }, 
+      {
+        "text": "salut salut", 
+        "intent": "goodbye"
+      }, 
+      {
+        "text": "farewell", 
+        "intent": "goodbye"
+      }, 
+      {
+        "text": "Bye bye", 
+        "intent": "goodbye"
+      }, 
+      {
+        "text": "have a good one", 
+        "intent": "goodbye"
+      }
+    ], 
+    "entity_synonyms": [], 
+    "regex_features": [
+      {
+        "pattern": "[0-9]{5}", 
+        "name": "zipcode"
+      }
+    ]
+  }
+}
