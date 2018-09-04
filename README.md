@@ -12,6 +12,16 @@ Feel free to make the project your own.
 Requirements 
 - Docker
 
+### 1
+```
+docker-compose up --build
 
-### First Step
-To be continued
+```
+
+### 2
+You will have two servers up 
+at localhost:5005 - serving the english model
+at localhost:5006 - serviing the french model
+
+### 3
+Redis tracker is running at port 6379
